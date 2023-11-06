@@ -21,7 +21,6 @@ export function aufgabe01(args) {
 export function aufgabe02(args) {
   const input = args
   const result = []
-
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
@@ -35,23 +34,48 @@ export function aufgabe02(args) {
  export function aufgabe03(args) {
   const input = args
   const result = []
+  let count = 0
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //Soll nur ein 'e' enthalten
+  if (currentElement === "e"){ 
+     count = count + 1
    }
+   //Soll grosses 'E' zählen
+    else if (currentElement === "E") {
+      count = count + 1 
+   }
+     }
+     return count
+
   return result.join("")
 }
  
 
-
-
  export function aufgabe04(args) {
   const input = args
   const result = []
+  
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
   }
   return result.join("")
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 export function aufgabe05(args) {
   const input = args
@@ -86,6 +110,7 @@ export function aufgabe08(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
   }
   return result.join("")
 }
