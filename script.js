@@ -82,19 +82,13 @@ export function aufgabe05(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-  //prüftt ob es einen Grossbuchstaben gibt
-  if (currentElement === "."){
-
-  }
-  else if (currentElement === " "){
-
-  }
-
-  //wenn ein Element gleich ist, dann rechnet es plus 1
+  //sollte Grossbuchstaben erkennen
+  if (currentElement === "."){}
+  else if (currentElement === " "){}
+  //wenn ein Element gleich ist, dann rechnet es + 1
   else if (currentElement === currentElement.toUpperCase())
   {capitalLetters++}
 }
-
 if (capitalLetters > 0) {
   return true
 } else {
