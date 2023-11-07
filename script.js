@@ -56,13 +56,19 @@ export function aufgabe02(args) {
  export function aufgabe04(args) {
   const input = args
   const result = []
+  let count = 1
   
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //Soll alle Leerzeichen zählen
+  if (currentElement === " "){
+     count = count + 1
+  }
 
   }
-  return result.join("")
+   return count
+
 }
 
 
