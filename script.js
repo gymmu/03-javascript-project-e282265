@@ -112,16 +112,6 @@ export function aufgabe06(args) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 export function aufgabe07(args) {
   const input = args
   const result = []
@@ -153,21 +143,26 @@ export function aufgabe08(args) {
   return result.join("")
 }
 
-
-
-
-
-
-
-
 export function aufgabe09(args) {
   const input = args
   const result = []
+  let len = 0
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    len = len + 1 
   }
-  return result.join("")
+  if (len === 6) {
+    return true
+  } else {
+    return false
+  }
+  return len
  }
+
+
+
+
+
 
  export function aufgabe10(args) {
   const input = args
@@ -178,23 +173,52 @@ export function aufgabe09(args) {
   return result.join("")
 }
 
+
+
+
+
+
 export function aufgabe11(args) {
   const input = args
-  const result = []
+  let ascii = null
+
+if ( input.length > 1 ) { //Funktionswächter
+  return null
+}
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    ascii = currentElement.charCodeAt(0)
+    return ascii
   }
-  return result.join("")
+  return null
 }
+
+
+
+
+
+
 
 export function aufgabe12(args) {
   const input = args
-  const result = []
+  
+  let pos = -1
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    pos = pos + 1 
+    if (currentElement === 'e' ) {
+      return pos
+    }
   }
-  return result.join("")
+  return -1 
 }
+
+
+
+
+
+
 
 export function aufgabe13(args) {
   const input = args
