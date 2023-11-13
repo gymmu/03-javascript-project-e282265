@@ -178,6 +178,8 @@ export function aufgabe09(args) {
 
 
 
+
+
 export function aufgabe11(args) {
   const input = args
   let ascii = null
@@ -193,15 +195,9 @@ if ( input.length > 1 ) { //Funktionswächter
   return null
 }
 
-
-
-
-
-
-
 export function aufgabe12(args) {
   const input = args
-  
+
   let pos = -1
 
   for (let i = 0; i < input.length; i++) {
@@ -214,29 +210,44 @@ export function aufgabe12(args) {
   return -1 
 }
 
-
-
-
-
-
-
 export function aufgabe13(args) {
   const input = args
   const result = []
+
+  let positionOfLastE = -1
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    if (currentElement === 'e' ) {
+      positionOfLastE = i
+    }
   }
-  return result.join("")
+  return positionOfLastE
 }
 
 export function aufgabe14(args) {
   const input = args
-  const result = []
+  let countE = 0
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    if (currentElement === 'e' ) {
+      countE = countE + 1
+      if (countE === 3) {
+        return i
+
+      }
+    }
   }
-  return result.join("")
+  return -1
 }
+
+
+
+
+
+
+
 
 export function aufgabe15(args) {
   const input = args
