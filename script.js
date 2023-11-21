@@ -93,37 +93,50 @@ if (capitalLetters > 0) {
   return true
 } else {
   return false
-}
+} 
 
  }
-
-
-
-
-
 
 export function aufgabe06(args) {
   const input = args
   const result = []
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-  }
-  return result.join("")
-}
 
+    const asciiCode = currentElement.charCodeAt (0)
+    if (
+      (asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
+        || asciiCode >= 91 && asciiCode <=96 || asciiCode >= 123)
+    ) {
+      return true
+    }
+
+  }
+  return false
+}
 
 export function aufgabe07(args) {
   const input = args
   const result = []
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //sollte ein und erkennen
+    if (currentElement === "u")
+      if (input[i+1] === "n")
+      if (input[i+2]=== "d") { 
+       return true
+    }
+     //sollte ein Und erkennen
+     if (currentElement === "U")
+      if (input[i+1]=== "n")
+      if (input[i+2]=== "d") {
+        return true
+      }
   }
-  return result.join("")
+  return false
 }
-
-
-
-
 
 export function aufgabe08(args) {
   const input = args
@@ -159,26 +172,26 @@ export function aufgabe09(args) {
   return len
  }
 
-
-
-
-
-
  export function aufgabe10(args) {
   const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
+
+  if (input.length !== 7) return false
+  if (input[0] !== "#") return false
+
+  for (let i = 1; i < input.length; i++) { 
     const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57) {
+    // mache nichts; ist eine Zahl    
+  } else if (65 <= ascii && ascii <= 70) {
+    //mache nichts; ist A-F
+  } else {
+    return false
   }
-  return result.join("")
 }
 
-
-
-
-
-
-
+return true
+ }
 
 export function aufgabe11(args) {
   const input = args
