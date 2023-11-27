@@ -255,21 +255,28 @@ export function aufgabe14(args) {
   return -1
 }
 
-
-
-
-
-
-
-
 export function aufgabe15(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
+  //breche nach dem ersten Leerschlag ab 
+  if (currentElement === ' ') { 
+    return result.join("")
+  }
+  result.push(currentElement)
   }
   return result.join("")
 }
+
+
+
+
+
+
+
+
 
 export function aufgabe16(args) {
   const input = args
@@ -385,6 +392,6 @@ export function aufgabe28(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
   }
-  return result.join("")
+  
 }
 
