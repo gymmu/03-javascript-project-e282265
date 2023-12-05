@@ -3,7 +3,7 @@ export function aufgabe01(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+   //lösche alle e
    if (currentElement === "e") {
     result.push("")
    } else if (currentElement === "E" ) {
@@ -103,7 +103,7 @@ export function aufgabe06(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+   
     const asciiCode = currentElement.charCodeAt (0)
     if (
       (asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
@@ -164,6 +164,7 @@ export function aufgabe09(args) {
     const currentElement = input[i]
     len = len + 1 
   }
+   //teste ob eine Eingabe genau sechs Zeichen lang ist
   if (len === 6) {
     return true
   } else {
@@ -244,6 +245,7 @@ export function aufgabe14(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //suche die Position des dritten e
     if (currentElement === 'e' ) {
       countE = countE + 1
       if (countE === 3) {
@@ -286,6 +288,8 @@ export function aufgabe16(args) {
   }
   return result.join("")
 }
+
+
 
 export function aufgabe17(args) {
   const input = args
@@ -408,3 +412,34 @@ export function aufgabe28(args) {
   
 }
 
+
+
+
+
+
+export function bubbleSort (args) {
+  
+  const text = args
+  const list = text.split("") //Mit diesem Code wandle ich den Text um, somit kann das Element vertauscht werden
+
+
+  for (let i = 0;i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i+1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)){
+      //Elemente müssen vertauscht werden, da die Reihenfolge nicht korrekt ist.
+
+      const tmp = list[i+1]
+
+      list[i+1] = list[i]
+
+      list[i] = tmp
+      i = -1 //von vorne anfangen
+    }
+  }
+
+  const result = list.join("")
+  console.log(result)
+
+  return result
+}
