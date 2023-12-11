@@ -331,14 +331,34 @@ export function aufgabe19(args) {
   return result.join("")
 }
 
+
+
+
+
+
+
 export function aufgabe20(args) {
   const input = args
   const result = []
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+
+    //Es soll prüfen, ob nach jedem "." ein Leerschlag ist
+    if (currentElement === ".") {
+      if (input[i+1] === " ") {
+        return true
+      }
+    }
   }
-  return result.join("")
+  return false
 }
+
+
+
+
+
+
 
 export function aufgabe21(args) {
   const input = args
